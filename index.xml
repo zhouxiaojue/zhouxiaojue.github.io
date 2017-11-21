@@ -11,20 +11,21 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Development </title>
+      <title>Statistical Analysis of Weighted Survey Data</title>
       <link>https://zhouxiaojue.github.io/project/sampling/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://zhouxiaojue.github.io/project/sampling/</guid>
-      <description></description>
+      <description>&lt;p&gt;This research projects focused on using&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>https://zhouxiaojue.github.io/project/example-external-project/</link>
+      <title>Various words&#39;s propreties on Words Recall</title>
+      <link>https://zhouxiaojue.github.io/project/emotionwords/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://zhouxiaojue.github.io/project/example-external-project/</guid>
+      <guid>https://zhouxiaojue.github.io/project/emotionwords/</guid>
       <description></description>
     </item>
     
