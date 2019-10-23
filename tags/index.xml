@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Xiaojue Zhou</title>
+    <title>Tags | Xiaojue Zhou</title>
     <link>https://zhouxiaojue.github.io/tags/</link>
-    <description>Recent content in Tags on Xiaojue Zhou</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Xiaojue Zhou</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://zhouxiaojue.github.io/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhouxiaojue.github.io/tags/academic/</guid>
-      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deep Learning</title>
-      <link>https://zhouxiaojue.github.io/tags/deep-learning/</link>
-      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhouxiaojue.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>https://zhouxiaojue.github.io/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhouxiaojue.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
+      <atom:link href="https://zhouxiaojue.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>https://zhouxiaojue.github.io/img/icon-192.png</url>
+      <title>Tags</title>
+      <link>https://zhouxiaojue.github.io/tags/</link>
+    </image>
     
   </channel>
 </rss>

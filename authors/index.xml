@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/authors/</link>
+      <atom:link href="https://zhouxiaojue.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>https://zhouxiaojue.github.io/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>https://zhouxiaojue.github.io/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://zhouxiaojue.github.io/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/authors/admin/</guid>
+      <description>&lt;p&gt;I am a currently a graduate student at Universtity of California Irvine working with Emily D Grossman about information flow between different brain regions during action recognition. We are especially interested posterior superior temporal sulcus(pSTS).
+Here is the link to my poster at SFN 2019 chicago! &lt;a href=&#34;https://zhouxiaojue.github.io/files/SFN2019Poster_XiaojueZ_web.pdf&#34;&gt;SFN 2019 Poster&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
