@@ -2,14 +2,14 @@
   "name": "Xiaojue Zhou",
   "short_name": "Xiaojue Zhou",
   "lang": "en-us",
-  "theme_color": "#2962ff",
-  "background_color": "#2962ff",
+  "theme_color": "#3f51b5",
+  "background_color": "#3f51b5",
   "icons": [{
-    "src": "../img/icon-192.png",
+    "src": "/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",
     "type": "image/png"
     }, {
-    "src": "../img/icon-512.png",
+    "src": "/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png",
     "sizes": "512x512",
     "type": "image/png"
      }],

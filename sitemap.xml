@@ -3,27 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zhouxiaojue.github.io/courses/example/example1/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>https://zhouxiaojue.github.io/talk/example/</loc>
+    <lastmod>2019-10-28T15:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/courses/example/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/courses/example/example2/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>https://zhouxiaojue.github.io/talk/</loc>
+    <lastmod>2019-10-28T15:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zhouxiaojue.github.io/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/authors/admin/</loc>
+    <lastmod>2019-10-28T15:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -35,7 +26,7 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/courses/</loc>
+    <loc>https://zhouxiaojue.github.io/post/</loc>
   </url>
   
   <url>
@@ -43,7 +34,15 @@
   </url>
   
   <url>
+    <loc>https://zhouxiaojue.github.io/publication/</loc>
+  </url>
+  
+  <url>
     <loc>https://zhouxiaojue.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/author/xiaojue-zhou/</loc>
   </url>
   
 </urlset>

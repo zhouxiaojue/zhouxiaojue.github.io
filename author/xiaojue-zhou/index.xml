@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | Xiaojue Zhou</title>
-    <link>https://zhouxiaojue.github.io/authors/</link>
-      <atom:link href="https://zhouxiaojue.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
-    <description>Authors</description>
+    <title>Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/author/xiaojue-zhou/</link>
+      <atom:link href="https://zhouxiaojue.github.io/author/xiaojue-zhou/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xiaojue Zhou</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
       <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
-      <title>Authors</title>
-      <link>https://zhouxiaojue.github.io/authors/</link>
+      <title>Xiaojue Zhou</title>
+      <link>https://zhouxiaojue.github.io/author/xiaojue-zhou/</link>
     </image>
     
   </channel>
