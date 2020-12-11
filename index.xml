@@ -13,14 +13,6 @@
     </image>
     
     <item>
-      <title>Sensory and Social Cognitive Networks Connectivity Depends on Attentive States.</title>
-      <link>https://zhouxiaojue.github.io/publication/ifg2021/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://zhouxiaojue.github.io/publication/ifg2021/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Where Are Our Action Predictions? Action Understanding as a Predictive Process: Integrative Model and Neuroimage Evidence</title>
       <link>https://zhouxiaojue.github.io/publication/litreview_2020_2/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
@@ -37,11 +29,46 @@
     </item>
     
     <item>
+      <title>Neuroimage format and orientation information in nifti</title>
+      <link>https://zhouxiaojue.github.io/post/imageorientation/</link>
+      <pubDate>Fri, 11 Dec 2020 11:39:25 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/post/imageorientation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sensory and Social Cognitive Networks Connectivity Depends on Attentive States.</title>
+      <link>https://zhouxiaojue.github.io/publication/ifg2021/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/publication/ifg2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Top-down attention guidance shapes action encoding in the pSTS</title>
       <link>https://zhouxiaojue.github.io/publication/mvpa2020_2/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://zhouxiaojue.github.io/publication/mvpa2020_2/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>How to do surface functional connectivity analysis?</title>
+      <link>https://zhouxiaojue.github.io/post/bvsurface/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/post/bvsurface/</guid>
+      <description>&lt;h3 id=&#34;understanding-surface&#34;&gt;Understanding Surface&lt;/h3&gt;
+&lt;h3 id=&#34;preprocessing-in-brain-voyager&#34;&gt;Preprocessing in Brain Voyager&lt;/h3&gt;
+&lt;h3 id=&#34;surface-reconstruction-in-freesurfer&#34;&gt;Surface reconstruction in freesurfer&lt;/h3&gt;
+&lt;h3 id=&#34;surface-group-normalization-cba-alignment-in-bv&#34;&gt;Surface group normalization (CBA alignment in BV)&lt;/h3&gt;
+&lt;h3 id=&#34;move-functional-data-to-native-surface-bv&#34;&gt;Move functional data to native surface (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;move-functional-data-to-reference-surface-bv&#34;&gt;Move functional data to reference surface (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;move-volumetric-roi-voi-to-surface-roi-poi-bv&#34;&gt;Move volumetric ROI (VOI) to surface ROI (POI) (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;calculate-functional-connectivity-in-matlab&#34;&gt;Calculate functional connectivity in MATLAB&lt;/h3&gt;
+&lt;h3 id=&#34;export-functional-connectivity-map-to-surface-statistical-maps-for-visualization-bv&#34;&gt;Export functional connectivity map to surface statistical maps for visualization (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;non-parametric-testing-for-thresholding-whole-brain-connectivity-analysis&#34;&gt;Non-parametric testing for thresholding whole brain connectivity analysis&lt;/h3&gt;
+&lt;p&gt;More Coming&amp;hellip;&lt;/p&gt;
+</description>
     </item>
     
     <item>

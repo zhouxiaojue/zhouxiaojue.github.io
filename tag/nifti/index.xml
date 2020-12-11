@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nifti | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/tag/nifti/</link>
+      <atom:link href="https://zhouxiaojue.github.io/tag/nifti/index.xml" rel="self" type="application/rss+xml" />
+    <description>nifti</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 11 Dec 2020 11:39:25 -0800</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
+      <title>nifti</title>
+      <link>https://zhouxiaojue.github.io/tag/nifti/</link>
+    </image>
+    
+    <item>
+      <title>Neuroimage format and orientation information in nifti</title>
+      <link>https://zhouxiaojue.github.io/post/imageorientation/</link>
+      <pubDate>Fri, 11 Dec 2020 11:39:25 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/post/imageorientation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -38,11 +38,6 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/publication/ifg2021/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhouxiaojue.github.io/publication/litreview_2020_2/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -68,6 +63,66 @@
   </url>
   
   <url>
+    <loc>https://zhouxiaojue.github.io/tag/afni/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/brain-voyager/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/categories/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/freesurfer/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/fsl/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/imaging-analysis/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/category/imaging-analysis/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/post/imageorientation/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/nifti/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/post/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tags/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/category/tutorial/</loc>
+    <lastmod>2020-12-11T11:39:25-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhouxiaojue.github.io/author/daniel-stehr/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -88,8 +143,23 @@
   </url>
   
   <url>
+    <loc>https://zhouxiaojue.github.io/publication/ifg2021/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhouxiaojue.github.io/publication/mvpa2020_2/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/post/bvsurface/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/surface-analysis/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -135,18 +205,6 @@
   <url>
     <loc>https://zhouxiaojue.github.io/author/tromp-d/</loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/post/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/tags/</loc>
   </url>
   
 </urlset>

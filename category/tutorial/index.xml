@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/category/tutorial/</link>
+      <atom:link href="https://zhouxiaojue.github.io/category/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <description>tutorial</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 11 Dec 2020 11:39:25 -0800</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
+      <title>tutorial</title>
+      <link>https://zhouxiaojue.github.io/category/tutorial/</link>
+    </image>
+    
+    <item>
+      <title>Neuroimage format and orientation information in nifti</title>
+      <link>https://zhouxiaojue.github.io/post/imageorientation/</link>
+      <pubDate>Fri, 11 Dec 2020 11:39:25 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/post/imageorientation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to do surface functional connectivity analysis?</title>
+      <link>https://zhouxiaojue.github.io/post/bvsurface/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/post/bvsurface/</guid>
+      <description>&lt;h3 id=&#34;understanding-surface&#34;&gt;Understanding Surface&lt;/h3&gt;
+&lt;h3 id=&#34;preprocessing-in-brain-voyager&#34;&gt;Preprocessing in Brain Voyager&lt;/h3&gt;
+&lt;h3 id=&#34;surface-reconstruction-in-freesurfer&#34;&gt;Surface reconstruction in freesurfer&lt;/h3&gt;
+&lt;h3 id=&#34;surface-group-normalization-cba-alignment-in-bv&#34;&gt;Surface group normalization (CBA alignment in BV)&lt;/h3&gt;
+&lt;h3 id=&#34;move-functional-data-to-native-surface-bv&#34;&gt;Move functional data to native surface (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;move-functional-data-to-reference-surface-bv&#34;&gt;Move functional data to reference surface (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;move-volumetric-roi-voi-to-surface-roi-poi-bv&#34;&gt;Move volumetric ROI (VOI) to surface ROI (POI) (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;calculate-functional-connectivity-in-matlab&#34;&gt;Calculate functional connectivity in MATLAB&lt;/h3&gt;
+&lt;h3 id=&#34;export-functional-connectivity-map-to-surface-statistical-maps-for-visualization-bv&#34;&gt;Export functional connectivity map to surface statistical maps for visualization (BV)&lt;/h3&gt;
+&lt;h3 id=&#34;non-parametric-testing-for-thresholding-whole-brain-connectivity-analysis&#34;&gt;Non-parametric testing for thresholding whole brain connectivity analysis&lt;/h3&gt;
+&lt;p&gt;More Coming&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
