@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daniel Stehr | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/author/daniel-stehr/</link>
+      <atom:link href="https://zhouxiaojue.github.io/author/daniel-stehr/index.xml" rel="self" type="application/rss+xml" />
+    <description>Daniel Stehr</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
+      <title>Daniel Stehr</title>
+      <link>https://zhouxiaojue.github.io/author/daniel-stehr/</link>
+    </image>
+    
+    <item>
+      <title>Top-down attention guidance shapes action encoding in the pSTS</title>
+      <link>https://zhouxiaojue.github.io/publication/mvpa2020_2/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/publication/mvpa2020_2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

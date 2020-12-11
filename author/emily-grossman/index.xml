@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emily Grossman | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/author/emily-grossman/</link>
+      <atom:link href="https://zhouxiaojue.github.io/author/emily-grossman/index.xml" rel="self" type="application/rss+xml" />
+    <description>Emily Grossman</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
+      <title>Emily Grossman</title>
+      <link>https://zhouxiaojue.github.io/author/emily-grossman/</link>
+    </image>
+    
+    <item>
+      <title>Sensory and Social Cognitive Networks Connectivity Depends on Attentive States.</title>
+      <link>https://zhouxiaojue.github.io/publication/ifg2021/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/publication/ifg2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Where Are Our Action Predictions? Action Understanding as a Predictive Process: Integrative Model and Neuroimage Evidence</title>
+      <link>https://zhouxiaojue.github.io/publication/litreview_2020_2/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/publication/litreview_2020_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Top-down attention guidance shapes action encoding in the pSTS</title>
+      <link>https://zhouxiaojue.github.io/publication/mvpa2020_2/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/publication/mvpa2020_2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
