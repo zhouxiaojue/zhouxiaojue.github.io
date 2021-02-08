@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>statistic modeling | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/category/statistic-modeling/</link>
+      <atom:link href="https://zhouxiaojue.github.io/category/statistic-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <description>statistic modeling</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 03 May 2016 14:14:13 -0800</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
+      <title>statistic modeling</title>
+      <link>https://zhouxiaojue.github.io/category/statistic-modeling/</link>
+    </image>
+    
+    <item>
+      <title>Statistical Analysis of Weighted Survey Data in R</title>
+      <link>https://zhouxiaojue.github.io/project/surveyweight/</link>
+      <pubDate>Tue, 03 May 2016 14:14:13 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/project/surveyweight/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;&lt;strong&gt;The problem&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The sampling problem: if we sample faithfully to the real subpopulation ratio within a population (the true random sampling strategy), then we might get unstable estimates. However, if we oversample in one subpopulation, then we have to correct for the oversampling. For example, autism twins are very rare. If we want to accurately measure their psychologycal assessments, we want to upsample by intentionally taking more measurements in autism twin pairs than we would if we stay true to the ratio of autism twin pairs to normal twin pairs.&lt;/p&gt;
+&lt;p&gt;Here, RDoC Study (2010-2012) Subsampling of Twin Pairs With Unequal Probability was a health survey on functional and structural neuroimaging and psychological assessments. They used a power strategy and took more samples in autism twin pairs.&lt;/p&gt;
+&lt;p&gt;My problem here is to pick a statistical strategy to estimate the true weights so the researchers can apply on their measurements to achieve both efficient and unbiased analysis.&lt;/p&gt;
+&lt;h2 id=&#34;approach&#34;&gt;&lt;strong&gt;Approach&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;models-to-estimate-weights&#34;&gt;&lt;strong&gt;Models to estimate weights&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Current study looks at different ways to calculate sample weights and compare their performances on the current dataset. Here, linear regression, polynomial regression, gamma linear regression, and gamma polynomial regression were used to estimate weights.&lt;/p&gt;
+&lt;h4 id=&#34;bootstrapping-to-evaluate-model-performance&#34;&gt;&lt;strong&gt;Bootstrapping to evaluate model performance&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;10000 times bootstrapping were performed to evaluate how different models performed in estimating weights.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SurveyWeights.png&#34; alt=&#34;Survey weights estimate process&#34; title=&#34;Analysis flow chart&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;measurements-of-model-performance&#34;&gt;&lt;strong&gt;Measurements of model performance&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Efficiency&lt;/strong&gt; : Ratio of standard deviation of bootstrapped original weights comparing to
+bootstrapped weights based on various methods described above. This is telling us how our newly estimated weights varied comparing to original weights.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Bias&lt;/strong&gt; : Difference between average bootstrapped estimates. Here, it is the difference between original weights to bootstrapped weights based on methods described above. This is telling us how different our newly estimated weights comparing to original weights.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;&lt;strong&gt;Results&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1. Were the parameters biased?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The table below indicated that the parameter estimates were close to it&amp;rsquo;s original estimates.
+&lt;img src=&#34;TableWeights.png&#34; alt=&#34;Weighted estimates comparison&#34; title=&#34;Weighted estimates comparison&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Also, across all the models, bias of different estimates (age, race, etc.,) were around zero.
+&lt;img src=&#34;BiasLine.png&#34; alt=&#34;Weighted estimates line&#34; title=&#34;Weighted estimates comparison&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Were the estimated weights efficient?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here,  yg and xyg model, which was gamma modeling of unsmoothed and smoothed sampling weights had the highest efficiency in estimating weights.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Efficiency.png&#34; alt=&#34;Efficiency of bootstrap estimates&#34; title=&#34;Weighted estimates comparison&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;While all the models used above can estimate accuracte weights, Gamma and linear models using either un-smoothed or smoothed estimates have the highest efficiency in estimating weights.&lt;/p&gt;
+&lt;h2 id=&#34;resource&#34;&gt;&lt;strong&gt;Resource&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;You can find the R code to do this analysis in my github respoitory.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
