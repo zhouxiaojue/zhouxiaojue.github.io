@@ -45,29 +45,6 @@
     </item>
     
     <item>
-      <title>How speaking a different language influneces our semantic understanding</title>
-      <link>https://zhouxiaojue.github.io/project/chineseword/</link>
-      <pubDate>Sun, 07 Feb 2021 14:18:03 -0800</pubDate>
-      <guid>https://zhouxiaojue.github.io/project/chineseword/</guid>
-      <description>&lt;h2 id=&#34;what-we-want&#34;&gt;&lt;strong&gt;What we want&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;BiasLine.png&#34; alt=&#34;Weighted estimates line&#34; title=&#34;Weighted estimates comparison&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;approach&#34;&gt;&lt;strong&gt;Approach&lt;/strong&gt;&lt;/h2&gt;
-&lt;h4 id=&#34;create-a-bank-of-stimuli&#34;&gt;Create a bank of stimuli&lt;/h4&gt;
-&lt;h4 id=&#34;design-experiment-to-observe-verbal-response&#34;&gt;Design experiment to observe verbal response&lt;/h4&gt;
-&lt;h4 id=&#34;analyze-individual-items&#34;&gt;Analyze individual items&lt;/h4&gt;
-&lt;p&gt;Designed and standardized 285 pictures of common objects using Photoshop as experimental materials and
-effectively measured human categorization cognitive ability with a minimal number of items in Eprime.
-• Analyzed research data by filtering behavioral data and calculating feature statistics such as entropy, resulting in
-establishing a standardized Chinese object naming bank with most representable items along with necessary measurements including reaction time and naming coherence.&lt;/p&gt;
-&lt;h2 id=&#34;outcome&#34;&gt;&lt;strong&gt;Outcome&lt;/strong&gt;&lt;/h2&gt;
-&lt;h4 id=&#34;what-we-found&#34;&gt;what we found&lt;/h4&gt;
-&lt;h4 id=&#34;the-bank-of-standardized-stimuli&#34;&gt;The bank of standardized stimuli&lt;/h4&gt;
-&lt;h2 id=&#34;future&#34;&gt;&lt;strong&gt;Future&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;If you are interested in collaboration, please contact halleycl at gmail dot com. We would love to have people use this stimuli bank!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Neuroimage format and orientation information in nifti</title>
       <link>https://zhouxiaojue.github.io/post/imageorientation/</link>
       <pubDate>Fri, 11 Dec 2020 11:39:25 -0800</pubDate>
@@ -164,6 +141,48 @@ bootstrapped weights based on various methods described above. This is telling u
 &lt;p&gt;While all the models used above can estimate accuracte weights, Gamma and linear models using either un-smoothed or smoothed estimates have the highest efficiency in estimating weights.&lt;/p&gt;
 &lt;h2 id=&#34;resource&#34;&gt;&lt;strong&gt;Resource&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;You can find the R code to do this analysis in my github respoitory.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How speaking a different language influneces our semantic understanding</title>
+      <link>https://zhouxiaojue.github.io/project/chineseword/</link>
+      <pubDate>Fri, 07 Feb 2014 14:18:03 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/project/chineseword/</guid>
+      <description>&lt;h2 id=&#34;what-we-want&#34;&gt;&lt;strong&gt;What we want&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;the-problem&#34;&gt;&lt;strong&gt;The problem&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;FlowerAll.jpg&#34; alt=&#34;Flowers&#34; title=&#34;All Flowers belong to flower category&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In English, individual flowers are usually named with specific name of that flower (e.g., rose, tulip). However, in Chinese flowers are usually named by both the basic level name (e.g., rose, tulip) followed by subordinate level name (花, flower). For example, chamomile is named 菊花 or chamomile flower. Therefore, it&amp;rsquo;s possible that Chinese native speakers categorize daily objects differently because how Chinese has built-in category information in the language.&lt;/p&gt;
+&lt;p&gt;Here, we are interested in finding the priming effects of the language. First of all, we need a standardized bank of based on Chinese speakers in order to find the most representable objects inside each basic levle category (e.g., a typical dog species within dog, typical flower within flower)&lt;/p&gt;
+&lt;h2 id=&#34;what-we-had&#34;&gt;&lt;strong&gt;What We Had&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;a-bank-of-stimuli&#34;&gt;A bank of stimuli&lt;/h4&gt;
+&lt;p&gt;First, we collected a bank of stimuli using daily objects. In the table below, each row is an picture representing a daily object. We want to know on average, if each item is named correctly and also consistenty among all the subjects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;DesiredOutcome.png&#34; alt=&#34;Desired bank of stimuli&#34; title=&#34;Desired bank of stimuli&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;design-experiment-to-observe-verbal-response&#34;&gt;Design experiment to observe verbal response&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;goldRetriever.jpeg&#34; alt=&#34;Stimuli&#34; title=&#34;Example stimuli&#34;&gt;&lt;/p&gt;
+&lt;div align = &#34;center&#34;&gt;An example stimuli&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;Response.png&#34; alt=&#34;Response&#34; title=&#34;Response of stimuli&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the experiment, we asked each subject to name a total of 400 individual pictures of objects and collected over 30 subjects&#39; verbal response to each picture, as well as how fast they name the object.&lt;/p&gt;
+&lt;h4 id=&#34;measurements-of-individual-items&#34;&gt;Measurements of individual items&lt;/h4&gt;
+&lt;p&gt;For each item (picture), we calculated the following statistics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Entropy&lt;/li&gt;
+&lt;li&gt;Average naming accuracy&lt;/li&gt;
+&lt;li&gt;Total number of different labels&lt;/li&gt;
+&lt;li&gt;Average response time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-we-found&#34;&gt;&lt;strong&gt;What We Found&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;While this is still an ongoing project, we have established the bank of 285 individual pictures of daily animals and daily objects, each comes with the following information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Standardized Chinese name&lt;/li&gt;
+&lt;li&gt;Corresponding English names&lt;/li&gt;
+&lt;li&gt;Item&amp;rsquo;s basic semantic level&lt;/li&gt;
+&lt;li&gt;Item&amp;rsquo;s surordinate level&lt;/li&gt;
+&lt;li&gt;Average Response time&lt;/li&gt;
+&lt;li&gt;Entropy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;future&#34;&gt;&lt;strong&gt;Future&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;If you are interested in collaboration, please contact halleycl at gmail dot com. We would love to have people use this stimuli bank!&lt;/p&gt;
 </description>
     </item>
     
