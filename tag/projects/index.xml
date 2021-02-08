@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/tag/projects/</link>
+      <atom:link href="https://zhouxiaojue.github.io/tag/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Dec 2015 14:18:55 -0800</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_huceba9e9d4a8c609672b14db0e634331f_215354_512x512_fill_lanczos_center_2.png</url>
+      <title>projects</title>
+      <link>https://zhouxiaojue.github.io/tag/projects/</link>
+    </image>
+    
+    <item>
+      <title>English Words’ Properties on Metacognition of Self-Memory</title>
+      <link>https://zhouxiaojue.github.io/project/wordproperties/</link>
+      <pubDate>Mon, 07 Dec 2015 14:18:55 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/project/wordproperties/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;&lt;strong&gt;The Problem&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Past studies already demonstrate strong emotional content of words improves people’s immediate recall memory and consistent colors further enhance memory(Donald et al., 2004).  It is interesting to see if same conclusion can be draw on metamemory and whether the color still interacts with emotion. If so, we can say this effect is immediate and on-line.&lt;/p&gt;
+&lt;p&gt;Besides looking at people’s memory ability, we can also look at how people recognize this cognitive ability. Metacognition is “thinking of thinking”. Metamemory is the introspective cognition about one’s own memory ability. It is a self-judgment. While people’s natural memory capacity would restrain number of words actually remembered, words’ attributes may have larger effect on decision of one’s judgment of memory ability.&lt;/p&gt;
+&lt;p&gt;One hypothesis of current study is participants will remember more words when words are more familiar or easier to imagine. However, participants may not consider themselves remember (metamemory) more imaginable words but they will for more familiar words, for the reason that imageability is not very easy to identify at first impression. The current paper studies how four attributes—imageability, familiarity, emotional valence and associated colors—affect people’s ability to remember words.&lt;/p&gt;
+&lt;p&gt;Factorial design is an efficient way to design experiment to quickly investigate individual variable effects, as well as the ability to study interaction effects between variables. Here I will used factorial design with repeated measure to understand the following questions.&lt;/p&gt;
+&lt;p&gt;Hypothesis:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;How word&amp;rsquo;s properties influence human memory ability?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How does individual word&amp;rsquo;s properties influence the differences in metacognition and recall?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;Stimuli.png&#34; alt=&#34;Stimuli&#34; title=&#34;StimuliColor&#34;&gt;&lt;/p&gt;
+&lt;div align = &#34;center&#34;&gt;Example stimuli of emotional valence and color variable. Each participant received a list of 20 words and ask to remember them. &lt;/div&gt;
+&lt;h2 id=&#34;experimental-design&#34;&gt;&lt;strong&gt;Experimental Design&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;independent-variables&#34;&gt;Independent Variables&lt;/h4&gt;
+&lt;p&gt;Here I used 4X3 repeated measure design to study the following effects both individually and also their interactions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Emotional Valence&lt;/li&gt;
+&lt;li&gt;Imageability&lt;/li&gt;
+&lt;li&gt;Familiarity&lt;/li&gt;
+&lt;li&gt;Colors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;DesignVariables.png&#34; alt=&#34;Variables&#34; title=&#34;Variables of interest&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;design&#34;&gt;Design&lt;/h4&gt;
+&lt;p&gt;Specific design here is a full factorial design. Words’ order in each list was completely randomized. Each condition was replicated three times (three blocks) and each block contained completely randomized orders of 16 trials.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;DesignMatrix.png&#34; alt=&#34;Design&#34; title=&#34;DesignMatrix&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;measurements-of-memory&#34;&gt;&lt;strong&gt;Measurements of memory&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;meta-memory&lt;/strong&gt; : number of words they think they will remember. This measured subjects&amp;rsquo;s metacognition of self memory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;actual recall&lt;/strong&gt; : number of words actually written down correctly. This is used to compare with meta-memory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-i-found&#34;&gt;&lt;strong&gt;What I found&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;Results.png&#34; alt=&#34;Result&#34; title=&#34;Results&#34;&gt;
+Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items subjects both think they will remember, and also they actually recall:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Imageability and familarity&lt;/li&gt;
+&lt;li&gt;Imageability and colors&lt;/li&gt;
+&lt;li&gt;Emotional valence and familarity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here it indicates that more imagenable and familiar words lead to better memory and also made deeper impression both consciously (through meta-cognition) and also subconsciously (recall).&lt;/p&gt;
+&lt;h4 id=&#34;participants-characteristics-by-condition&#34;&gt;&lt;strong&gt;Participants characteristics by Condition&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;I additionally analyze how the participants use to remember words.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Participants used at least one strategy (9.33) remember more than participants used no strategy at all (8.125).&lt;/li&gt;
+&lt;li&gt;Most participants used strategies such as association, twist letter, phonetic clues to remember words.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;English words with following properties made more impression:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Familiar words&lt;/li&gt;
+&lt;li&gt;Negative words&lt;/li&gt;
+&lt;li&gt;Emotional words&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also, words in cooler colors allowed subjects to imagine those words more easily, therefore possibly increasing their memory on those words. Additionally, using a strategy was important to recall english words.&lt;/p&gt;
+&lt;h2 id=&#34;resource&#34;&gt;&lt;strong&gt;Resource&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;My code to analyze the experiment data can be found here &lt;a href=&#34;project.Rmd&#34;&gt;(R Markdown file)&lt;/a&gt; and also on my github repository.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
