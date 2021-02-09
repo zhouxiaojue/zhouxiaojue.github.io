@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>English Words’ Properties on Metacognition of Self-Memory</title>
+      <title>What kind of words can influence our memory?</title>
       <link>https://zhouxiaojue.github.io/project/wordproperties/</link>
       <pubDate>Mon, 07 Dec 2015 14:18:55 -0800</pubDate>
       <guid>https://zhouxiaojue.github.io/project/wordproperties/</guid>
@@ -56,14 +56,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;what-i-found&#34;&gt;&lt;strong&gt;What I found&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;While individual ANOVA analysis of response variable &lt;em&gt;recall&lt;/em&gt;, or &lt;em&gt;meta-cognition&lt;/em&gt; has not shown any significant effect dependent on words&#39; properties. I further only looked at words overlap between words subjects they thought they would remember, and also they actually recalled later.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Results.png&#34; alt=&#34;Result&#34; title=&#34;Results&#34;&gt;
-Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items subjects both think they will remember, and also they actually recall:&lt;/p&gt;
+Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items subjects both thought they would remember, and also they actually recalled:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Imageability and familarity&lt;/li&gt;
 &lt;li&gt;Imageability and colors&lt;/li&gt;
 &lt;li&gt;Emotional valence and familarity&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here it indicates that more imagenable and familiar words lead to better memory and also made deeper impression both consciously (through meta-cognition) and also subconsciously (recall).&lt;/p&gt;
+&lt;p&gt;Here it indicated that more imagenable and familiar words lead to better memory and also made deeper impression both consciously (through meta-cognition) and also subconsciously (recall).&lt;/p&gt;
 &lt;h4 id=&#34;participants-characteristics-by-condition&#34;&gt;&lt;strong&gt;Participants characteristics by Condition&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;I additionally analyze how the participants use to remember words.&lt;/p&gt;
 &lt;ol&gt;
@@ -79,7 +80,7 @@ Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items sub
 &lt;/ul&gt;
 &lt;p&gt;Also, words in cooler colors allowed subjects to imagine those words more easily, therefore possibly increasing their memory on those words. Additionally, using a strategy was important to recall english words.&lt;/p&gt;
 &lt;h2 id=&#34;resource&#34;&gt;&lt;strong&gt;Resource&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;My code to analyze the experiment data can be found here &lt;a href=&#34;project.Rmd&#34;&gt;(R Markdown file)&lt;/a&gt; and also on my github repository.&lt;/p&gt;
+&lt;p&gt;My code to analyze the experiment data can be found here &lt;a href=&#34;project.Rmd&#34;&gt;(R Markdown file)&lt;/a&gt; and also on my github repository. If you want to replicate this experiment yourself, here is the materials &lt;a href=&#34;wordlist.pdf&#34;&gt;(Wordlist.pdf)&lt;/a&gt; I used to conduct this experiment.&lt;/p&gt;
 </description>
     </item>
     

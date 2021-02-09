@@ -105,7 +105,7 @@ bootstrapped weights based on various methods described above. This is telling u
     </item>
     
     <item>
-      <title>English Words’ Properties on Metacognition of Self-Memory</title>
+      <title>What kind of words can influence our memory?</title>
       <link>https://zhouxiaojue.github.io/project/wordproperties/</link>
       <pubDate>Mon, 07 Dec 2015 14:18:55 -0800</pubDate>
       <guid>https://zhouxiaojue.github.io/project/wordproperties/</guid>
@@ -148,14 +148,15 @@ bootstrapped weights based on various methods described above. This is telling u
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;what-i-found&#34;&gt;&lt;strong&gt;What I found&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;While individual ANOVA analysis of response variable &lt;em&gt;recall&lt;/em&gt;, or &lt;em&gt;meta-cognition&lt;/em&gt; has not shown any significant effect dependent on words&#39; properties. I further only looked at words overlap between words subjects they thought they would remember, and also they actually recalled later.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Results.png&#34; alt=&#34;Result&#34; title=&#34;Results&#34;&gt;
-Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items subjects both think they will remember, and also they actually recall:&lt;/p&gt;
+Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items subjects both thought they would remember, and also they actually recalled:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Imageability and familarity&lt;/li&gt;
 &lt;li&gt;Imageability and colors&lt;/li&gt;
 &lt;li&gt;Emotional valence and familarity&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here it indicates that more imagenable and familiar words lead to better memory and also made deeper impression both consciously (through meta-cognition) and also subconsciously (recall).&lt;/p&gt;
+&lt;p&gt;Here it indicated that more imagenable and familiar words lead to better memory and also made deeper impression both consciously (through meta-cognition) and also subconsciously (recall).&lt;/p&gt;
 &lt;h4 id=&#34;participants-characteristics-by-condition&#34;&gt;&lt;strong&gt;Participants characteristics by Condition&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;I additionally analyze how the participants use to remember words.&lt;/p&gt;
 &lt;ol&gt;
@@ -171,7 +172,81 @@ Here I found out three $\rho &amp;lt; 0.01$ interaction effects on the items sub
 &lt;/ul&gt;
 &lt;p&gt;Also, words in cooler colors allowed subjects to imagine those words more easily, therefore possibly increasing their memory on those words. Additionally, using a strategy was important to recall english words.&lt;/p&gt;
 &lt;h2 id=&#34;resource&#34;&gt;&lt;strong&gt;Resource&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;My code to analyze the experiment data can be found here &lt;a href=&#34;project.Rmd&#34;&gt;(R Markdown file)&lt;/a&gt; and also on my github repository.&lt;/p&gt;
+&lt;p&gt;My code to analyze the experiment data can be found here &lt;a href=&#34;project.Rmd&#34;&gt;(R Markdown file)&lt;/a&gt; and also on my github repository. If you want to replicate this experiment yourself, here is the materials &lt;a href=&#34;wordlist.pdf&#34;&gt;(Wordlist.pdf)&lt;/a&gt; I used to conduct this experiment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Procrastination Questionnaire Construction</title>
+      <link>https://zhouxiaojue.github.io/project/procrastinatequestionnaire/</link>
+      <pubDate>Sun, 07 Dec 2014 14:18:32 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/project/procrastinatequestionnaire/</guid>
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;&lt;strong&gt;Motivation&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Most of the procrastination questionnaire is old, and subtypes of procrastination has been definied but not applied. While most people studied anxiety behind procrastination and rather used vague questions to ask individual subjects on their patterns of daily activity. I was interested in building a questionnaire specifically targeting college students.&lt;/p&gt;
+&lt;h2 id=&#34;questionnaire-construction&#34;&gt;&lt;strong&gt;Questionnaire Construction&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;what-the-textbook-says&#34;&gt;&lt;strong&gt;What the textbook says&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;From Crocker &amp;amp; Algina&amp;rsquo;s textbook :  &lt;em&gt;Introduction to Classical and Modern Test Theory&lt;/em&gt;, they suggested the following steps when constructing a test.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Identify the primary purpose of the test score use&lt;/li&gt;
+&lt;li&gt;Identify behaviors to represent the construct
+&lt;ul&gt;
+&lt;li&gt;content analysis&lt;/li&gt;
+&lt;li&gt;review of research&lt;/li&gt;
+&lt;li&gt;critical incident&lt;/li&gt;
+&lt;li&gt;direct observation&lt;/li&gt;
+&lt;li&gt;expert judgement&lt;/li&gt;
+&lt;li&gt;instruction objectives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Domain sampling&lt;/li&gt;
+&lt;li&gt;Item construction&lt;/li&gt;
+&lt;li&gt;Item review&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;how-i-wrote-the-questionnaire&#34;&gt;&lt;strong&gt;How I wrote the questionnaire&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;First of all, I want to know what it means exactly by procrastination.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Procrastination definition&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Procrastination is the unplanned delaying tasks and procrastinators often feel guilty about their procrastination.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Literature Research&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then, I wanted to know if any researchers has systematically studied procrastination. So I searched studies on academic procrastination and summarized their findings on procrastination.&lt;/p&gt;
+&lt;p&gt;Specifically, procrastination can be divided into two categories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;decisional procrastination&lt;/li&gt;
+&lt;li&gt;behavioral procrastination.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Brain Storm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After studying about procrastination study, then I visualized what a procrastinator (like myself) would do in each category.&lt;/p&gt;
+&lt;p&gt;Typical behaviors of procrastinators are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;missing deadlines&lt;/li&gt;
+&lt;li&gt;making decisions until last minutes&lt;/li&gt;
+&lt;li&gt;spend time on meaningless task before finishing task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additionally, I included questions to ask about how individuals recognize their procrastination by asking question in these two additional categories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how they feel about procrastination&lt;/li&gt;
+&lt;li&gt;the reasons for procrastinations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-questionnaire&#34;&gt;&lt;strong&gt;My questionnaire&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;questionnaire.png&#34; alt=&#34;questionnaire&#34; title=&#34;Questionnaire&#34;&gt;
+The current questionnaire is a self-evaluating scale focused on behavioral and decisional procrastinations in daily life and academic, reasons of procrastinations and feelings about procrastinations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initially I had 50 items, then I analyzed the collected responses and end up with 25 items.&lt;/li&gt;
+&lt;li&gt;5-point likert scale&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;population-and-sample&#34;&gt;&lt;strong&gt;Population and sample&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;I collected responses from 25 classmates in my psychometric class, which are all graduate students in academics so it fits my desired academic population.&lt;/p&gt;
+&lt;h2 id=&#34;measuring-my-questionnaire&#34;&gt;&lt;strong&gt;Measuring my questionnaire&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;I used the following measurements to understand how effective my questionnaire is at evaluating people&amp;rsquo;s internal states.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cohen&amp;rsquo;s kappa&lt;/strong&gt; : Cohen&amp;rsquo;s kappa measures the agreement between two raters who each classify N items into mutually exclusive categories.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;inter-rater agreement&lt;/strong&gt; : confidence of whether the cluster I assign it to other people also assign it to.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;potential-impact&#34;&gt;&lt;strong&gt;Potential Impact&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Procrastination scores were often related to lower self-regulations, lower self-efficacy, and higher neuroctism of personality trait. While most people would recognize procrastination as part of their personality, I hope this questionnaire would be their first step to identify specific behavior pattern and their general tendency to procrastination.&lt;/p&gt;
+&lt;h2 id=&#34;improvements&#34;&gt;&lt;strong&gt;Improvements&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Unfortunately, I lost the original collected data therefore cannot recover the measured statistics on individual items. This questionnaire was a psychometric class project and therefore hasn&amp;rsquo;t been widely studied in a bigger subject pool. If I have an opportunity, I would specifically collect responses from undergraduate students and see how different the response is comparing to graduate students&#39;. Also, this questionnaire was designed in 2014 and people probably procrastinate with different things with advances in technology in 2021 (2021 still sounds like future to me).&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;If you are intersted in using my questionnaire, you can find the printable pdf here &lt;a href=&#34;procrastinationscale.pdf&#34;&gt;(Procrastination Survey)&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
