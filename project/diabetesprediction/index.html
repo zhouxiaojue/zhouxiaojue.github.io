@@ -1,0 +1,1570 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.3 for Hugo" />
+  
+
+  
+    <meta name="google-site-verification" content="5fcRWVderxsmM_XIuK7Xxy7ZBDgdOM_712s35bh-V9U" />
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Xiaojue Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Neural Networks, Random Forests, and Logistic Regression." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://zhouxiaojue.github.io/project/diabetesprediction/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#3f51b5" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3916cb0b00ec32d89b359479d02e7236.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103033924-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-103033924-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5MRX47L');
+</script>
+
+
+  
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://zhouxiaojue.github.io/project/diabetesprediction/" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Xiaojue Zhou" />
+  <meta property="og:url" content="https://zhouxiaojue.github.io/project/diabetesprediction/" />
+  <meta property="og:title" content="Predicting Diabetes Readmission Rates with Machine Learning Tools | Xiaojue Zhou" />
+  <meta property="og:description" content="Neural Networks, Random Forests, and Logistic Regression." /><meta property="og:image" content="https://zhouxiaojue.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+    <meta property="twitter:image" content="https://zhouxiaojue.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2019-12-15T14:18:32-08:00"
+      />
+    
+    <meta property="article:modified_time" content="2019-12-15T14:18:32-08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zhouxiaojue.github.io/project/diabetesprediction/"
+  },
+  "headline": "Predicting Diabetes Readmission Rates with Machine Learning Tools",
+  
+  "datePublished": "2019-12-15T14:18:32-08:00",
+  "dateModified": "2019-12-15T14:18:32-08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Xiaojue Zhou"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Xiaojue Zhou",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zhouxiaojue.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Neural Networks, Random Forests, and Logistic Regression."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Predicting Diabetes Readmission Rates with Machine Learning Tools | Xiaojue Zhou</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8be00435174e2a694d14c4b53a403b4d.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Xiaojue Zhou</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Xiaojue Zhou</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Posters</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Predicting Diabetes Readmission Rates with Machine Learning Tools</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Xiaojue Zhou</span>, <span >
+      Priyam Das</span>, <span >
+      Jinwei Xing</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 15, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/machine-learning/">Machine Learning</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/WHaMoCaTY" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="purpose">Purpose</h1>
+<p>Our group chose to work with the Diabetes 130-US Hospitals dataset for this project. This dataset contains 10 years of patient diabetes records collected from 130 hospitals in the US.
+The dataset contains</p>
+<ul>
+<li>101,766 records</li>
+<li>49 features</li>
+<li>3 class labels.
+A description of the features and the amount of missing data in each category can be found at <a href="https://www.hindawi.com/journals/bmri/2014/781670/tab1/" target="_blank" rel="noopener">https://www.hindawi.com/journals/bmri/2014/781670/tab1/</a> so we will not spend time explaining them here.</li>
+</ul>
+<h1 id="what-we-are-predicting">What we are predicting</h1>
+<p>The 3 class labels our models will predict are
+We are trying to understand the diabete&rsquo;s readmission rates in relationship to other variables. Specifically, re-admission rates referred to whether or not a patient is readmitted to the hospital after the visit recorded in the database.</p>
+<ul>
+<li>&ldquo;&lt;30&rdquo; : whether the patient was readmitted in less than 30 days</li>
+<li>&ldquo;&gt;30&rdquo; : whether the patient was readmitted in more than 30 days</li>
+<li>&ldquo;NO&rdquo; : no record of readmission exists</li>
+</ul>
+<h1 id="cleaning-the-data-and-feature-selection">Cleaning the Data and Feature Selection</h1>
+<h3 id="missing-data">Missing Data</h3>
+<p>First we looked at those features with high amounts of missing data:</p>
+<ul>
+<li>weight (97% missing, will fit model with and without)</li>
+<li>payer code (not relevant for diabetes itself but maybe interesting to look in the future)</li>
+<li>medical specialty (53% missing)</li>
+</ul>
+<p>We found out 97% of the weight data was missing so then we decided there was no worth in trying to include it in our analyses. We also threw out the payer code feature because the type of health insurance a patient has should have very little bearing on a patient’s care and whether they will be readmitted. We went back and forth on whether to keep medical specialty - which is a feature describing the speciality of the attending doctor. 53% of the data was missing in this category. After inspecting the values this feature could take on (84 distinct values in total) we decided it was out of scope for the project to try and reconstruct the missing values and also decided to exclude this feature from our final analyses.</p>
+<p>We also delete these empty features:</p>
+<ul>
+<li>examide: No patients were prescribed this drug</li>
+<li>citoglipton: No patients were prescribed this drug</li>
+</ul>
+<p>Also, we deleted these features with less than 2 inputs</p>
+<ul>
+<li>glimepiride</li>
+<li>pioglitazone</li>
+<li>acetohexamide</li>
+<li>metformin.pioglitazone</li>
+<li>metformin.rosiglitazone</li>
+</ul>
+<h3 id="transform-data">Transform Data</h3>
+<p>Comorbidity:<br>
+The ICD-9 codes that were used as values for diag1, diag2, and diag3 (diagnoses) were remapped to 9 categorical values that indicated the type of disease:</p>
+<ul>
+<li>Circulatory</li>
+<li>Respiratory</li>
+<li>Digestive</li>
+<li>Diabetes</li>
+<li>Injury</li>
+<li>Musculoskeletal</li>
+<li>Genitourinary</li>
+<li>Neoplasms</li>
+<li>Other</li>
+</ul>
+<p>Multiple visits:
+Finally, we noticed that some patient identifying numbers were repeated more than once, indicating multiple visits from the same person. In order to be able to assume independence of our data points, we only kept the first visit (as identified using encounter ids) for each patient and threw out the rest.</p>
+<h3 id="cleaned-dataset">Cleaned Dataset</h3>
+<p>Out final cleaned dataset:</p>
+<ul>
+<li>number of data points: 71,518 rows</li>
+<li>number of features: 38 columns</li>
+</ul>
+<h1 id="exploratory-data-analysis">Exploratory Data Analysis</h1>
+<h3 id="pca">PCA</h3>
+<p>In an attempt to reduce the number of features further, we performed a principal components analysis (PCA) but this did not prove too informative. The first principal component only accounted for 5.5% of the data. Therefore we decided to keep the rest of our features. Figure 1 shows how much each feature explains the data set. The features making the most contributions are indicator variables that say whether or not diabetes medication was prescribed to the patient and whether or not there was a change in dosage for prescribed medication. These features together accounted for 10% of the data. Whether diabetes medication was prescribed and whether there was a change are highly correlated. We suspect this may be because if a patient’s condition is worsening, then a new medication may be prescribed or a higher dosage given and thus there will be a change in dosage. Alternatively, if a patient’s condition is improving, their dosage may be decreased and this is still a change. If someone is not prescribed medicine at all, then there will be no change to administer.</p>
+<p><img src="PCA_Variable.jpeg" alt="PCA Plots"></p>
+<p>Figure 1. Principal components of the data and how much each accounted for the data.</p>
+<h3 id="logistic-regression">Logistic Regression</h3>
+<p>We performed some additional preprocessing of the data, namely one-hot encoding the categorical values and shuffling the data. with larger values as more important. After the one-hot encoding, there are 73 features to be used as coefficients in our model.</p>
+<p>The data was also split into a training set and a test set, with the first 60,000 data points used for the training set. We trained a multiclass logistic regression model using scikit-learn. Since there are 3 classes, we trained 3 binary classifiers.</p>
+<p>The <strong>accuracy on the test data was 0.609</strong>. Additionally, we report the features that had the highest abstract coefficients for each classifier.</p>
+<p><strong>&lt; 30 class (readmitted within 30 days)</strong>
+The most important factors were:</p>
+<ul>
+<li>number of inpatient (β = 3.899)</li>
+<li>emergency (β = 1.962) visits,</li>
+<li>the prescription of chlorpropamide (β = −0.897)</li>
+<li>no diabetic medicine prescribed (β = −0.865)</li>
+<li>manner in which the patient was discharged (β = 0.824).</li>
+</ul>
+<p><img src="LR_class2.jpg" alt=""></p>
+<p>Figure 2. The 5 most important factors for the &lt;30 classifier. Red means negative values while green means positive.</p>
+<p><strong>&gt;30 class (readmitted after 30 days)</strong>
+The most important factors were:</p>
+<ul>
+<li>number of emergency (β = 4.285)</li>
+<li>outpatient (β = 2.836)</li>
+<li>inpatient (β = 2.558) visits</li>
+<li>the prescription of miglitol (β = 1.606)</li>
+<li>and the number of diagnoses(β = 1.285).</li>
+</ul>
+<p><img src="LR_class3.jpg" alt=""></p>
+<p>Figure 3. The 5 most important factors for the &gt;30 classifier. Red means negative values while green means positive.</p>
+<p><strong>No Readmission class</strong>
+The most important factors were</p>
+<ul>
+<li>the number of emergency (β = −6.179)</li>
+<li>inpatient (β = −5.287)</li>
+<li>outpatient visits (β = −3.110) in the preceding year</li>
+<li>the number of diagnoses (β = −1.820)</li>
+<li>whether a patient was prescribed miglitol (β = −0.792).</li>
+</ul>
+<p><img src="LR_class2.jpg" alt=""></p>
+<p>Figure 4. The 5 most important factors for the no readmission classifier. Red means negative values while green means positive.</p>
+<p>It makes sense that the values for no record of readmission and readmission after 30 days have values on opposite ends of the scales. The features themselves make sense too, as you’re more likely to need a second visit if you’ve already been visiting the hospital enough in the previous year and have several diagnoses.</p>
+<h1 id="predictive-models">Predictive Models</h1>
+<h3 id="neural-networks-with-pytorch">Neural Networks with PyTorch</h3>
+<p>As with the logistic regression model, some preprocessing was done to the data.</p>
+<ul>
+<li>Normalized using MinMaxNormalization</li>
+<li>split into a training and test set
+<ul>
+<li>with the first 60,000 data points in the training set</li>
+<li>the rest in the test set.</li>
+</ul>
+</li>
+<li>one-hot encoded as before.</li>
+</ul>
+<p>Neural networks were implemented using Pytorch. We tried two different network structures. Both networks had 73 input nodes and 3 output nodes.</p>
+<ul>
+<li>One network had a hidden layer with 200 nodes</li>
+<li>One network had 2 hidden layers with 200 nodes each.</li>
+<li>The batch size was 256 because we wanted a large batch for stable training.</li>
+<li>The learning rate was set at 0.0001 so that we could track the learning process. With too high of a learning rate, the model seemed likely to overfit.</li>
+</ul>
+<p>Both models achieved exactly the <strong>same accuracy of 0.601</strong> which was surprising. It seems like the second hidden layer may
+have been redundant, however when we look at plots of the loss and accuracy, we see that the two layer network converges
+faster.</p>
+<p><img src="loss.jpg" alt=""></p>
+<p>Figure 5. Performance of both networks. The loss over 20 epochs of training.</p>
+<p><img src="acc.jpg" alt=""></p>
+<p>Figure 6 Performance of both networks. The accuracy on the held out test set of data.</p>
+<h3 id="decision-trees-scikit-learn">Decision Trees (Scikit-learn)</h3>
+<p>To run decision trees on the data, the categorical features still needed</p>
+<ul>
+<li>Ran MinMaxNormalization to be one-hot encoded</li>
+<li>Separated the data into a training and test split with 60,000 data points to stay consistent with the other models, though the data wasn’t shuffled for this model.</li>
+</ul>
+<p>We used the scikit-learn implementation of a Decision Tree Classifier.</p>
+<ul>
+<li>Splits : decided based on information gain</li>
+<li>minParent: left at the default value of 2.</li>
+<li>maximum depth : We tested a few different values to set for the maximum depth of the tree and found that a max depth of 2 or 3 yielded the highest accuracy of 0.701.</li>
+</ul>
+<p><strong>Accuracy</strong>
+<strong>0.701</strong></p>
+<h3 id="random-forest-scikit-learn">Random Forest (Scikit-learn)</h3>
+<p><strong>Ensemble of decision tree</strong></p>
+<p>Since we know that decision trees are prone to overfitting, we used scikit learn’s RandomForestClassifier to build an ensemble of decision trees. Using what we learned from our decision tree, we built the forest using</p>
+<ul>
+<li>trees of max depth 3</li>
+<li>minParent 2</li>
+<li>Splits were calculated using information gain</li>
+</ul>
+<p><strong>Findings</strong>
+We found that whether we used 100 or 1000 trees, the accuracy of 0.730 did not change. However, the accuracy drastically changes whether each class is given the same weight or is given a weight inversely proportional to its frequency. If the weights are not equal, accuracy tanks to 0.384 which makes sense because the number of no readmissions is almost twice that of the next frequent class, readmissions after 30 days.</p>
+<p><img src="feat_imp.jpg" alt=""></p>
+<p>Figure 7. The 5 most important factors for splits made in trees of the random forest.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>We tried a variety of machine learning techniques on this 3-class classification problem. First we made feature selections and tried to use PCA to reduce the number of features. Then we trained various models and measured their accuracy.</p>
+<p>Comparison between models for performance on Diabete&rsquo;s readmission rates:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align:center">Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neural Network</td>
+<td style="text-align:center">0.601</td>
+</tr>
+<tr>
+<td>logistic regression</td>
+<td style="text-align:center">0.609</td>
+</tr>
+<tr>
+<td>decision tree</td>
+<td style="text-align:center">0.701</td>
+</tr>
+<tr>
+<td><strong>random forest</strong></td>
+<td style="text-align:center"><strong>0.730</strong></td>
+</tr>
+</tbody>
+</table>
+<p>As we learned in class, ensembles can be very powerful because they’re less prone to overfitting and can generalize better. Our results support this.
+Also, the model&rsquo;s successful performance is dependent on the feature inpatient, which is the number of inpatient visits of the patient in the year preceding the encounter. This feature has been indicated important in both logistic regression and decision trees.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/ml/">ML</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://zhouxiaojue.github.io/project/diabetesprediction/&amp;text=Predicting%20Diabetes%20Readmission%20Rates%20with%20Machine%20Learning%20Tools" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://zhouxiaojue.github.io/project/diabetesprediction/&amp;t=Predicting%20Diabetes%20Readmission%20Rates%20with%20Machine%20Learning%20Tools" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Predicting%20Diabetes%20Readmission%20Rates%20with%20Machine%20Learning%20Tools&amp;body=https://zhouxiaojue.github.io/project/diabetesprediction/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://zhouxiaojue.github.io/project/diabetesprediction/&amp;title=Predicting%20Diabetes%20Readmission%20Rates%20with%20Machine%20Learning%20Tools" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Predicting%20Diabetes%20Readmission%20Rates%20with%20Machine%20Learning%20Tools%20https://zhouxiaojue.github.io/project/diabetesprediction/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://zhouxiaojue.github.io/project/diabetesprediction/&amp;title=Predicting%20Diabetes%20Readmission%20Rates%20with%20Machine%20Learning%20Tools" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://zhouxiaojue.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu49c03114a9ce8ad2bc0bd62c0ddb3f2a_983067_270x270_fill_q75_lanczos_center.jpg" alt="Xiaojue Zhou"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://zhouxiaojue.github.io/">Xiaojue Zhou</a></h5>
+      <h6 class="card-subtitle">Graduate student</h6>
+      <p class="card-text">A graduate student studying how we understand about human actions and natural events.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://instagram.com/xiaojwe/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ZhouXiaojue" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=9i_gmf8AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/zhouxiaojue" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    <script src="/js/_vendor/bootstrap.bundle.min.29d2abb07db775505d3a2efc824e7b29.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.929da1f718bfb4f2d796aade0bd4e361.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

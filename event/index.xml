@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/event/</link>
+      <atom:link href="https://zhouxiaojue.github.io/event/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 28 Oct 2019 15:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://zhouxiaojue.github.io/event/</link>
+    </image>
+    
+    <item>
+      <title>Functional Connectivity During Action Recognition Modulated By Top-down Goals</title>
+      <link>https://zhouxiaojue.github.io/talk/functional-connectivity-during-action-recognition-modulated-by-top-down-goals/</link>
+      <pubDate>Mon, 28 Oct 2019 15:00:00 +0000</pubDate>
+      <guid>https://zhouxiaojue.github.io/talk/functional-connectivity-during-action-recognition-modulated-by-top-down-goals/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

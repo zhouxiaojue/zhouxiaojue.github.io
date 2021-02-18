@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ML | Xiaojue Zhou</title>
+    <link>https://zhouxiaojue.github.io/tag/ml/</link>
+      <atom:link href="https://zhouxiaojue.github.io/tag/ml/index.xml" rel="self" type="application/rss+xml" />
+    <description>ML</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2019 14:18:32 -0800</lastBuildDate>
+    <image>
+      <url>https://zhouxiaojue.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>ML</title>
+      <link>https://zhouxiaojue.github.io/tag/ml/</link>
+    </image>
+    
+    <item>
+      <title>Predicting Diabetes Readmission Rates with Machine Learning Tools</title>
+      <link>https://zhouxiaojue.github.io/project/diabetesprediction/</link>
+      <pubDate>Sun, 15 Dec 2019 14:18:32 -0800</pubDate>
+      <guid>https://zhouxiaojue.github.io/project/diabetesprediction/</guid>
+      <description>&lt;h1 id=&#34;purpose&#34;&gt;Purpose&lt;/h1&gt;
+&lt;p&gt;Our group chose to work with the Diabetes 130-US Hospitals dataset for this project. This dataset contains 10 years of patient diabetes records collected from 130 hospitals in the US.
+The dataset contains&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;101,766 records&lt;/li&gt;
+&lt;li&gt;49 features&lt;/li&gt;
+&lt;li&gt;3 class labels.
+A description of the features and the amount of missing data in each category can be found at &lt;a href=&#34;https://www.hindawi.com/journals/bmri/2014/781670/tab1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hindawi.com/journals/bmri/2014/781670/tab1/&lt;/a&gt; so we will not spend time explaining them here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;what-we-are-predicting&#34;&gt;What we are predicting&lt;/h1&gt;
+&lt;p&gt;The 3 class labels our models will predict are
+We are trying to understand the diabete&amp;rsquo;s readmission rates in relationship to other variables. Specifically, re-admission rates referred to whether or not a patient is readmitted to the hospital after the visit recorded in the database.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;&amp;lt;30&amp;rdquo; : whether the patient was readmitted in less than 30 days&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;&amp;gt;30&amp;rdquo; : whether the patient was readmitted in more than 30 days&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;NO&amp;rdquo; : no record of readmission exists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;cleaning-the-data-and-feature-selection&#34;&gt;Cleaning the Data and Feature Selection&lt;/h1&gt;
+&lt;h3 id=&#34;missing-data&#34;&gt;Missing Data&lt;/h3&gt;
+&lt;p&gt;First we looked at those features with high amounts of missing data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;weight (97% missing, will fit model with and without)&lt;/li&gt;
+&lt;li&gt;payer code (not relevant for diabetes itself but maybe interesting to look in the future)&lt;/li&gt;
+&lt;li&gt;medical specialty (53% missing)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We found out 97% of the weight data was missing so then we decided there was no worth in trying to include it in our analyses. We also threw out the payer code feature because the type of health insurance a patient has should have very little bearing on a patient’s care and whether they will be readmitted. We went back and forth on whether to keep medical specialty - which is a feature describing the speciality of the attending doctor. 53% of the data was missing in this category. After inspecting the values this feature could take on (84 distinct values in total) we decided it was out of scope for the project to try and reconstruct the missing values and also decided to exclude this feature from our final analyses.&lt;/p&gt;
+&lt;p&gt;We also delete these empty features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;examide: No patients were prescribed this drug&lt;/li&gt;
+&lt;li&gt;citoglipton: No patients were prescribed this drug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also, we deleted these features with less than 2 inputs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;glimepiride&lt;/li&gt;
+&lt;li&gt;pioglitazone&lt;/li&gt;
+&lt;li&gt;acetohexamide&lt;/li&gt;
+&lt;li&gt;metformin.pioglitazone&lt;/li&gt;
+&lt;li&gt;metformin.rosiglitazone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;transform-data&#34;&gt;Transform Data&lt;/h3&gt;
+&lt;p&gt;Comorbidity:&lt;br&gt;
+The ICD-9 codes that were used as values for diag1, diag2, and diag3 (diagnoses) were remapped to 9 categorical values that indicated the type of disease:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Circulatory&lt;/li&gt;
+&lt;li&gt;Respiratory&lt;/li&gt;
+&lt;li&gt;Digestive&lt;/li&gt;
+&lt;li&gt;Diabetes&lt;/li&gt;
+&lt;li&gt;Injury&lt;/li&gt;
+&lt;li&gt;Musculoskeletal&lt;/li&gt;
+&lt;li&gt;Genitourinary&lt;/li&gt;
+&lt;li&gt;Neoplasms&lt;/li&gt;
+&lt;li&gt;Other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Multiple visits:
+Finally, we noticed that some patient identifying numbers were repeated more than once, indicating multiple visits from the same person. In order to be able to assume independence of our data points, we only kept the first visit (as identified using encounter ids) for each patient and threw out the rest.&lt;/p&gt;
+&lt;h3 id=&#34;cleaned-dataset&#34;&gt;Cleaned Dataset&lt;/h3&gt;
+&lt;p&gt;Out final cleaned dataset:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of data points: 71,518 rows&lt;/li&gt;
+&lt;li&gt;number of features: 38 columns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;exploratory-data-analysis&#34;&gt;Exploratory Data Analysis&lt;/h1&gt;
+&lt;h3 id=&#34;pca&#34;&gt;PCA&lt;/h3&gt;
+&lt;p&gt;In an attempt to reduce the number of features further, we performed a principal components analysis (PCA) but this did not prove too informative. The first principal component only accounted for 5.5% of the data. Therefore we decided to keep the rest of our features. Figure 1 shows how much each feature explains the data set. The features making the most contributions are indicator variables that say whether or not diabetes medication was prescribed to the patient and whether or not there was a change in dosage for prescribed medication. These features together accounted for 10% of the data. Whether diabetes medication was prescribed and whether there was a change are highly correlated. We suspect this may be because if a patient’s condition is worsening, then a new medication may be prescribed or a higher dosage given and thus there will be a change in dosage. Alternatively, if a patient’s condition is improving, their dosage may be decreased and this is still a change. If someone is not prescribed medicine at all, then there will be no change to administer.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PCA_Variable.jpeg&#34; alt=&#34;PCA Plots&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 1. Principal components of the data and how much each accounted for the data.&lt;/p&gt;
+&lt;h3 id=&#34;logistic-regression&#34;&gt;Logistic Regression&lt;/h3&gt;
+&lt;p&gt;We performed some additional preprocessing of the data, namely one-hot encoding the categorical values and shuffling the data. with larger values as more important. After the one-hot encoding, there are 73 features to be used as coefficients in our model.&lt;/p&gt;
+&lt;p&gt;The data was also split into a training set and a test set, with the first 60,000 data points used for the training set. We trained a multiclass logistic regression model using scikit-learn. Since there are 3 classes, we trained 3 binary classifiers.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;accuracy on the test data was 0.609&lt;/strong&gt;. Additionally, we report the features that had the highest abstract coefficients for each classifier.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt; 30 class (readmitted within 30 days)&lt;/strong&gt;
+The most important factors were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of inpatient (β = 3.899)&lt;/li&gt;
+&lt;li&gt;emergency (β = 1.962) visits,&lt;/li&gt;
+&lt;li&gt;the prescription of chlorpropamide (β = −0.897)&lt;/li&gt;
+&lt;li&gt;no diabetic medicine prescribed (β = −0.865)&lt;/li&gt;
+&lt;li&gt;manner in which the patient was discharged (β = 0.824).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;LR_class2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 2. The 5 most important factors for the &amp;lt;30 classifier. Red means negative values while green means positive.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt;30 class (readmitted after 30 days)&lt;/strong&gt;
+The most important factors were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of emergency (β = 4.285)&lt;/li&gt;
+&lt;li&gt;outpatient (β = 2.836)&lt;/li&gt;
+&lt;li&gt;inpatient (β = 2.558) visits&lt;/li&gt;
+&lt;li&gt;the prescription of miglitol (β = 1.606)&lt;/li&gt;
+&lt;li&gt;and the number of diagnoses(β = 1.285).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;LR_class3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 3. The 5 most important factors for the &amp;gt;30 classifier. Red means negative values while green means positive.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No Readmission class&lt;/strong&gt;
+The most important factors were&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the number of emergency (β = −6.179)&lt;/li&gt;
+&lt;li&gt;inpatient (β = −5.287)&lt;/li&gt;
+&lt;li&gt;outpatient visits (β = −3.110) in the preceding year&lt;/li&gt;
+&lt;li&gt;the number of diagnoses (β = −1.820)&lt;/li&gt;
+&lt;li&gt;whether a patient was prescribed miglitol (β = −0.792).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;LR_class2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 4. The 5 most important factors for the no readmission classifier. Red means negative values while green means positive.&lt;/p&gt;
+&lt;p&gt;It makes sense that the values for no record of readmission and readmission after 30 days have values on opposite ends of the scales. The features themselves make sense too, as you’re more likely to need a second visit if you’ve already been visiting the hospital enough in the previous year and have several diagnoses.&lt;/p&gt;
+&lt;h1 id=&#34;predictive-models&#34;&gt;Predictive Models&lt;/h1&gt;
+&lt;h3 id=&#34;neural-networks-with-pytorch&#34;&gt;Neural Networks with PyTorch&lt;/h3&gt;
+&lt;p&gt;As with the logistic regression model, some preprocessing was done to the data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Normalized using MinMaxNormalization&lt;/li&gt;
+&lt;li&gt;split into a training and test set
+&lt;ul&gt;
+&lt;li&gt;with the first 60,000 data points in the training set&lt;/li&gt;
+&lt;li&gt;the rest in the test set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;one-hot encoded as before.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Neural networks were implemented using Pytorch. We tried two different network structures. Both networks had 73 input nodes and 3 output nodes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One network had a hidden layer with 200 nodes&lt;/li&gt;
+&lt;li&gt;One network had 2 hidden layers with 200 nodes each.&lt;/li&gt;
+&lt;li&gt;The batch size was 256 because we wanted a large batch for stable training.&lt;/li&gt;
+&lt;li&gt;The learning rate was set at 0.0001 so that we could track the learning process. With too high of a learning rate, the model seemed likely to overfit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both models achieved exactly the &lt;strong&gt;same accuracy of 0.601&lt;/strong&gt; which was surprising. It seems like the second hidden layer may
+have been redundant, however when we look at plots of the loss and accuracy, we see that the two layer network converges
+faster.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;loss.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 5. Performance of both networks. The loss over 20 epochs of training.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;acc.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 6 Performance of both networks. The accuracy on the held out test set of data.&lt;/p&gt;
+&lt;h3 id=&#34;decision-trees-scikit-learn&#34;&gt;Decision Trees (Scikit-learn)&lt;/h3&gt;
+&lt;p&gt;To run decision trees on the data, the categorical features still needed&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ran MinMaxNormalization to be one-hot encoded&lt;/li&gt;
+&lt;li&gt;Separated the data into a training and test split with 60,000 data points to stay consistent with the other models, though the data wasn’t shuffled for this model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We used the scikit-learn implementation of a Decision Tree Classifier.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Splits : decided based on information gain&lt;/li&gt;
+&lt;li&gt;minParent: left at the default value of 2.&lt;/li&gt;
+&lt;li&gt;maximum depth : We tested a few different values to set for the maximum depth of the tree and found that a max depth of 2 or 3 yielded the highest accuracy of 0.701.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Accuracy&lt;/strong&gt;
+&lt;strong&gt;0.701&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;random-forest-scikit-learn&#34;&gt;Random Forest (Scikit-learn)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Ensemble of decision tree&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Since we know that decision trees are prone to overfitting, we used scikit learn’s RandomForestClassifier to build an ensemble of decision trees. Using what we learned from our decision tree, we built the forest using&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;trees of max depth 3&lt;/li&gt;
+&lt;li&gt;minParent 2&lt;/li&gt;
+&lt;li&gt;Splits were calculated using information gain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Findings&lt;/strong&gt;
+We found that whether we used 100 or 1000 trees, the accuracy of 0.730 did not change. However, the accuracy drastically changes whether each class is given the same weight or is given a weight inversely proportional to its frequency. If the weights are not equal, accuracy tanks to 0.384 which makes sense because the number of no readmissions is almost twice that of the next frequent class, readmissions after 30 days.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;feat_imp.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 7. The 5 most important factors for splits made in trees of the random forest.&lt;/p&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;We tried a variety of machine learning techniques on this 3-class classification problem. First we made feature selections and tried to use PCA to reduce the number of features. Then we trained various models and measured their accuracy.&lt;/p&gt;
+&lt;p&gt;Comparison between models for performance on Diabete&amp;rsquo;s readmission rates:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Performance&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Neural Network&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.601&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;logistic regression&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.609&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;decision tree&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;random forest&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;0.730&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As we learned in class, ensembles can be very powerful because they’re less prone to overfitting and can generalize better. Our results support this.
+Also, the model&amp;rsquo;s successful performance is dependent on the feature inpatient, which is the number of inpatient visits of the patient in the year preceding the encounter. This feature has been indicated important in both logistic regression and decision trees.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,27 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc></loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhouxiaojue.github.io/publication-type/3/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/authors/</loc>
+    <loc></loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/chen-l/</loc>
+    <loc></loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/derderian-k/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/author/emily-grossman/</loc>
+    <loc></loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,12 +53,12 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/xiaojue-zhou/</loc>
+    <loc></loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/zhou-x/</loc>
+    <loc></loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,22 +123,22 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/daniel-stehr/</loc>
+    <loc></loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/john-pyles/</loc>
+    <loc></loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/mariel-tisby/</loc>
+    <loc></loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/patrick-hwu/</loc>
+    <loc></loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -163,13 +163,53 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/talk/example/</loc>
+    <loc></loc>
+    <lastmod>2019-12-15T14:18:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/category/machine-learning/</loc>
+    <lastmod>2019-12-15T14:18:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/tag/ml/</loc>
+    <lastmod>2019-12-15T14:18:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/project/diabetesprediction/</loc>
+    <lastmod>2019-12-15T14:18:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2019-12-15T14:18:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/project/</loc>
+    <lastmod>2019-12-15T14:18:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/talk/functional-connectivity-during-action-recognition-modulated-by-top-down-goals/</loc>
     <lastmod>2019-10-28T15:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/talk/</loc>
+    <loc>https://zhouxiaojue.github.io/event/</loc>
     <lastmod>2019-10-28T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -178,38 +218,33 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/fox-a/</loc>
+    <loc></loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/kalin-n/</loc>
+    <loc></loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/kenwood-m/</loc>
+    <loc></loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/oler-j/</loc>
+    <loc></loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/riedel-m/</loc>
+    <loc></loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/author/tromp-d/</loc>
+    <loc></loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhouxiaojue.github.io/project/</loc>
-    <lastmod>2016-05-03T14:14:13-08:00</lastmod>
   </url>
   
   <url>
@@ -228,12 +263,12 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/category/experimental-design/</loc>
+    <loc>https://zhouxiaojue.github.io/tag/behavior/</loc>
     <lastmod>2015-12-07T14:18:55-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/tag/projects/</loc>
+    <loc>https://zhouxiaojue.github.io/category/experimental-design/</loc>
     <lastmod>2015-12-07T14:18:55-08:00</lastmod>
   </url>
   
@@ -248,11 +283,6 @@
   </url>
   
   <url>
-    <loc>https://zhouxiaojue.github.io/tag/questionnaire/</loc>
-    <lastmod>2014-12-07T14:18:32-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhouxiaojue.github.io/category/survey-design/</loc>
     <lastmod>2014-12-07T14:18:32-08:00</lastmod>
   </url>
@@ -260,6 +290,10 @@
   <url>
     <loc>https://zhouxiaojue.github.io/project/chineseword/</loc>
     <lastmod>2014-02-07T14:18:03-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhouxiaojue.github.io/admin/</loc>
   </url>
   
 </urlset>
